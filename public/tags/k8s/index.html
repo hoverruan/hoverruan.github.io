@@ -166,7 +166,7 @@
         <div class="posts-list">
           
             <article class="post-preview">
-    <a href="https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/">
+    <a href="https://hoverruan.github.io/blog/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/">
         <h2 class="post-title">在阿里云上安装 Kubernetes v1.25.4</h2>
         
         
@@ -199,7 +199,7 @@
 创建一台香港的ECS服务器 安装必要的系统软件 拉取 Kubernetes 集群所需的镜像 制作成阿里云的系统自定义镜像 将镜像复制到国内的区域 在国内区域基于上述镜像，配置 Kubernetes 集群 制作自定义镜像 基本思路：
 通过 nerdctl 的 full distribution 发行版本，完成 runc、containerd、CNI plugins 等重要组件的安装，大大简化了安装过程 对 containerd 的配置改动： 默认的 sandbox_image 是 k8s.gcr.io/pause:3.6，改成跟 kubeadm config images pull 获取的版本一致：registry.k8s.io/pause:3.8 通过 systemd 来启动 执行 yum install 时指定具体的版本号，减少不确定性 采用 calico 作为网络插件 通过下面的脚本，可以一键安装好所需的全部工具并拉取所有的镜像：
 #!/usr/bin/env bash sudo setenforce 0 sudo sed -i &#39;s/^SELINUX=enforcing$/SELINUX=permissive/&#39; /etc/selinux/config swapoff -a cat &lt;&lt;EOF | sudo tee /etc/modules-load.
-        <a href="https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/" class="post-read-more">[Read More]</a>
+        <a href="https://hoverruan.github.io/blog/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/" class="post-read-more">[Read More]</a>
         
     </div>
 

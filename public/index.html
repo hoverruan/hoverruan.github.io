@@ -168,7 +168,7 @@
           
           
             <article class="post-preview">
-    <a href="https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/">
+    <a href="https://hoverruan.github.io/blog/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/">
         <h2 class="post-title">在阿里云上安装 Kubernetes v1.25.4</h2>
         
         
@@ -201,7 +201,7 @@
 创建一台香港的ECS服务器 安装必要的系统软件 拉取 Kubernetes 集群所需的镜像 制作成阿里云的系统自定义镜像 将镜像复制到国内的区域 在国内区域基于上述镜像，配置 Kubernetes 集群 制作自定义镜像 基本思路：
 通过 nerdctl 的 full distribution 发行版本，完成 runc、containerd、CNI plugins 等重要组件的安装，大大简化了安装过程 对 containerd 的配置改动： 默认的 sandbox_image 是 k8s.gcr.io/pause:3.6，改成跟 kubeadm config images pull 获取的版本一致：registry.k8s.io/pause:3.8 通过 systemd 来启动 执行 yum install 时指定具体的版本号，减少不确定性 采用 calico 作为网络插件 通过下面的脚本，可以一键安装好所需的全部工具并拉取所有的镜像：
 #!/usr/bin/env bash sudo setenforce 0 sudo sed -i &#39;s/^SELINUX=enforcing$/SELINUX=permissive/&#39; /etc/selinux/config swapoff -a cat &lt;&lt;EOF | sudo tee /etc/modules-load.
-        <a href="https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/" class="post-read-more">[Read More]</a>
+        <a href="https://hoverruan.github.io/blog/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/" class="post-read-more">[Read More]</a>
         
     </div>
 
@@ -216,7 +216,7 @@
 </article>
           
             <article class="post-preview">
-    <a href="https://hoverruan.github.io/posts/2013/06/25/config-redis-replication-on-centos-5/">
+    <a href="https://hoverruan.github.io/blog/2013/06/25/config-redis-replication-on-centos-5/">
         <h2 class="post-title">Config Redis Replication on Centos 5</h2>
         
         
@@ -247,7 +247,7 @@
 $ wget http://redis.googlecode.com/files/redis-2.6.14.tar.gz $ cd redis-2.6.14 $ make $ sudo make install CentOS 5自带的Tcl版本是8.4，Redis的make test需要用到Tcl 8.5以上的版本，如果你需要运行测试用例，请先安装新版本的Tcl，然后再安装Redis：
 $ wget http://prdownloads.sourceforge.net/tcl/tcl8.6.0-src.tar.gz $ tar xzvf tcl8.6.0-src.tar.gz $ cd tcl8.6.0/unix $ ./configure $ make $ make test $ sudo make install 配置 Redis 服务 修复安装脚本 utils/install_server.sh 的问题 这个版本的安装脚本有一个小问题，请看 #909 Pull Request:
 @@ -159,7 +159,7 @@ REDIS_CHKCONFIG_INFO=\ # Description: Redis daemon\n ### END INIT INFO\n\n&#34; -if [ !
-        <a href="https://hoverruan.github.io/posts/2013/06/25/config-redis-replication-on-centos-5/" class="post-read-more">[Read More]</a>
+        <a href="https://hoverruan.github.io/blog/2013/06/25/config-redis-replication-on-centos-5/" class="post-read-more">[Read More]</a>
         
     </div>
 
@@ -256,7 +256,7 @@ $ wget http://prdownloads.sourceforge.net/tcl/tcl8.6.0-src.tar.gz $ tar xzvf tcl
 </article>
           
             <article class="post-preview">
-    <a href="https://hoverruan.github.io/posts/2013/06/21/using-maven-checkstyle-plugin/">
+    <a href="https://hoverruan.github.io/blog/2013/06/21/using-maven-checkstyle-plugin/">
         <h2 class="post-title">Using Maven Checkstyle Plugin</h2>
         
         
@@ -294,7 +294,7 @@ $ wget http://prdownloads.sourceforge.net/tcl/tcl8.6.0-src.tar.gz $ tar xzvf tcl
 Maven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-checkstyle-plugin 的配置
 &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;/plugin&gt; 修改配置，使用自定义的 Checkstyle 配置文件；其中，${project.basedir}是指项目的根目录：
 &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;configuration&gt; &lt;configLocation&gt;${project.basedir}/conf/checkstyle.xml&lt;/configLocation&gt; &lt;/configuration&gt; &lt;/plugin&gt; 最后，我们还需要在检查到代码风格有问题的时候，让我们的构建过程失败：
-        <a href="https://hoverruan.github.io/posts/2013/06/21/using-maven-checkstyle-plugin/" class="post-read-more">[Read More]</a>
+        <a href="https://hoverruan.github.io/blog/2013/06/21/using-maven-checkstyle-plugin/" class="post-read-more">[Read More]</a>
         
     </div>
 
@@ -303,7 +303,7 @@ Maven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-che
 </article>
           
             <article class="post-preview">
-    <a href="https://hoverruan.github.io/posts/2013/06/09/server-side-engineer-roadmap/">
+    <a href="https://hoverruan.github.io/blog/2013/06/09/server-side-engineer-roadmap/">
         <h2 class="post-title">Server Side Engineer Roadmap</h2>
         
         
@@ -345,7 +345,7 @@ Node.js Node.js利用Google Chrome的V8引擎来运行本地的JavaScript程序�
 {% img /images/2013/06/github-top-languages.png %}
 Go Go 是Google在2007年发起的一个开源的服务器编程语言，有如下的优点：
 简单！表现在两方面，一是语法简单、清晰，Java、C++里面一些复杂的语法都不会出现在这里，你能在Go里面发现简洁的替代方式；另一方面是Go自身所带的库以清晰的结构提供了绝大部分所必需的功能 高性能。Go是编译成本地的二进制运行的，运行效率跟C是一个级别，是PHP之类的动态语言无法比拟的 优秀的并发编程模型，Go里面的Channel和Goroutine在进行并发业务开发的时候，无需担心内存共享中很麻烦的锁的问题；同时Go的并发模型可以有效的利用现代服务器硬件的多核资源 工程编译速度快，同样规模的Go项目，编译时间比C语言项目少很多 Go开发RESTful的服务的速度很快，跟使用PHP的开发效率差不多，并且在代码越来越多的时候，Go的优秀的工程管理优势会越来越明显。
-        <a href="https://hoverruan.github.io/posts/2013/06/09/server-side-engineer-roadmap/" class="post-read-more">[Read More]</a>
+        <a href="https://hoverruan.github.io/blog/2013/06/09/server-side-engineer-roadmap/" class="post-read-more">[Read More]</a>
         
     </div>
 
@@ -354,7 +354,7 @@ Go Go 是Google在2007年发起的一个开源的服务器编程语言，有如�
 </article>
           
             <article class="post-preview">
-    <a href="https://hoverruan.github.io/posts/2013/01/10/maven-build-lifecycle/">
+    <a href="https://hoverruan.github.io/blog/2013/01/10/maven-build-lifecycle/">
         <h2 class="post-title">Maven Build Lifecycle</h2>
         
         
@@ -387,7 +387,7 @@ clean阶段: 项目清理阶段 default阶段: 默认阶段，大部分的编译
 ** Clean阶段 **
 pre-clean clean post-clean ** Default阶段 **
 validate initialize generate-sources process-sources generate-resources process-resources compile process-classes generate-test-sources process-test-sources generate-test-resources process-test-resources test-compile process-test-classes test prepare-package package pre-integration-test integration-test post-integration-test verify install deploy Site阶段 pre-site site post-site site-deploy Lifecycle和Maven Plugin Maven的核心非常精简，除了核心的Lifecycle、Phase等过程的定义之外，所有的实际操作都是以Plugin的方式提供的。为了减少用户的配置，提高易用性，Maven在发布的时候，已经默认绑定了一些基本的plugin，可以完成大部分的编译、测试、打包和发布等操作。
-        <a href="https://hoverruan.github.io/posts/2013/01/10/maven-build-lifecycle/" class="post-read-more">[Read More]</a>
+        <a href="https://hoverruan.github.io/blog/2013/01/10/maven-build-lifecycle/" class="post-read-more">[Read More]</a>
         
     </div>
 
@@ -396,7 +396,7 @@ validate initialize generate-sources process-sources generate-resources process-
 </article>
           
             <article class="post-preview">
-    <a href="https://hoverruan.github.io/posts/2013/01/06/using-tomcat-maven-plugin-for-local-development/">
+    <a href="https://hoverruan.github.io/blog/2013/01/06/using-tomcat-maven-plugin-for-local-development/">
         <h2 class="post-title">Using Tomcat Maven Plugin for Local Development</h2>
         
         

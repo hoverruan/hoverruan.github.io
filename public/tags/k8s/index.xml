@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 26 Nov 2022 22:30:37 +0800</lastBuildDate><atom:link href="https://hoverruan.github.io/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在阿里云上安装 Kubernetes v1.25.4</title>
-      <link>https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</link>
+      <link>https://hoverruan.github.io/blog/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</link>
       <pubDate>Sat, 26 Nov 2022 22:30:37 +0800</pubDate>
       
-      <guid>https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</guid>
+      <guid>https://hoverruan.github.io/blog/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</guid>
       <description>本次测试安装最新的发布版本 v1.25.4。比较大的改动是从 v1.24 开始正式 移除了对dockershim的支持，本文使用 containerd + nerdctl 来替代原来的 docker。
 之前操作系统都选择 CentOS 7.x，但是 7.x 的维护期也只是到2024年6月30日就结束了。后续的服务器操作系统打算切换到阿里云自己维护的 Alibaba Cloud Linux 上面，本次测试采用的服务器版本是 Alibaba Cloud Linux 3.2104。
 本次测试采取在墙外制作系统镜像、在墙内使用的策略，避免配置其他第三方的安装源：

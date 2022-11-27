@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 26 Nov 2022 22:30:37 +0800</lastBuildDate><atom:link href="https://hoverruan.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在阿里云上安装 Kubernetes v1.25.4</title>
-      <link>https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</link>
+      <link>https://hoverruan.github.io/blog/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</link>
       <pubDate>Sat, 26 Nov 2022 22:30:37 +0800</pubDate>
       
-      <guid>https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</guid>
+      <guid>https://hoverruan.github.io/blog/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</guid>
       <description>本次测试安装最新的发布版本 v1.25.4。比较大的改动是从 v1.24 开始正式 移除了对dockershim的支持，本文使用 containerd + nerdctl 来替代原来的 docker。
 之前操作系统都选择 CentOS 7.x，但是 7.x 的维护期也只是到2024年6月30日就结束了。后续的服务器操作系统打算切换到阿里云自己维护的 Alibaba Cloud Linux 上面，本次测试采用的服务器版本是 Alibaba Cloud Linux 3.2104。
 本次测试采取在墙外制作系统镜像、在墙内使用的策略，避免配置其他第三方的安装源：
@@ -23,10 +23,10 @@
     
     <item>
       <title>Config Redis Replication on Centos 5</title>
-      <link>https://hoverruan.github.io/posts/2013/06/25/config-redis-replication-on-centos-5/</link>
+      <link>https://hoverruan.github.io/blog/2013/06/25/config-redis-replication-on-centos-5/</link>
       <pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://hoverruan.github.io/posts/2013/06/25/config-redis-replication-on-centos-5/</guid>
+      <guid>https://hoverruan.github.io/blog/2013/06/25/config-redis-replication-on-centos-5/</guid>
       <description>安装 Redis 2.6.14 CentOS 5.4 Redis 2.6.14 下载并安装：
 $ wget http://redis.googlecode.com/files/redis-2.6.14.tar.gz $ cd redis-2.6.14 $ make $ sudo make install CentOS 5自带的Tcl版本是8.4，Redis的make test需要用到Tcl 8.5以上的版本，如果你需要运行测试用例，请先安装新版本的Tcl，然后再安装Redis：
 $ wget http://prdownloads.sourceforge.net/tcl/tcl8.6.0-src.tar.gz $ tar xzvf tcl8.6.0-src.tar.gz $ cd tcl8.6.0/unix $ ./configure $ make $ make test $ sudo make install 配置 Redis 服务 修复安装脚本 utils/install_server.sh 的问题 这个版本的安装脚本有一个小问题，请看 #909 Pull Request:
@@ -35,10 +35,10 @@ $ wget http://prdownloads.sourceforge.net/tcl/tcl8.6.0-src.tar.gz $ tar xzvf tcl
     
     <item>
       <title>Using Maven Checkstyle Plugin</title>
-      <link>https://hoverruan.github.io/posts/2013/06/21/using-maven-checkstyle-plugin/</link>
+      <link>https://hoverruan.github.io/blog/2013/06/21/using-maven-checkstyle-plugin/</link>
       <pubDate>Fri, 21 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://hoverruan.github.io/posts/2013/06/21/using-maven-checkstyle-plugin/</guid>
+      <guid>https://hoverruan.github.io/blog/2013/06/21/using-maven-checkstyle-plugin/</guid>
       <description>为什么要统一代码风格？ 每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己， 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。
 在你的团队里面，如果每个人写代码的时候都按照自己的个性去写，结果一定很有趣，就像一个人写的字一样，一看就知道是张三的字； 这段代码一看就是李四的杰作，根本不需要在每个文件头注明 @author ！
 好吧，我并不觉得有趣，我的智商还不足以在面对不同风格的代码之间频繁切换的同时，还能集中精力去思考业务和逻辑问题， 我认为整洁的代码能够降低我的理解成本，从而用宝贵的时间去解决真正有价值的问题。
@@ -54,10 +54,10 @@ Maven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-che
     
     <item>
       <title>Server Side Engineer Roadmap</title>
-      <link>https://hoverruan.github.io/posts/2013/06/09/server-side-engineer-roadmap/</link>
+      <link>https://hoverruan.github.io/blog/2013/06/09/server-side-engineer-roadmap/</link>
       <pubDate>Sun, 09 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://hoverruan.github.io/posts/2013/06/09/server-side-engineer-roadmap/</guid>
+      <guid>https://hoverruan.github.io/blog/2013/06/09/server-side-engineer-roadmap/</guid>
       <description>到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。
 在实践中学习的效率是最高的，所以我们不会专门安排一段较长的时间专门给他们用于学习，通常我们要求他们用一天的时间搭建开发环境，然后第二天或者第三天就开始实际的编码。这听起来似乎有点残酷，或者说，新手能够在第二天就写出有用的代码吗？
 答案是可以的，因为我们采用了结对编程的实践，每个新手在一开始的时候，都由有经验的人带着一起Coding，包括从头创建一个项目，进行配置，创建必要的脚本，一起完成具体的业务需求，一起写测试，一起重构，并发布到服务器。经过这样的过程，新手也能在很短时间内，对整个服务器的开发流程有一个很具体的认知，因为这些都是他亲身经历的（新手通常在Pair的时候应该承担更多的实际的编码工作）。恐惧来源于未知，亲身经历过整个过程以后，开发的每一个方面对这曾经的新手来说，不再是未知的怪兽。
@@ -77,10 +77,10 @@ Go Go 是Google在2007年发起的一个开源的服务器编程语言，有如�
     
     <item>
       <title>Maven Build Lifecycle</title>
-      <link>https://hoverruan.github.io/posts/2013/01/10/maven-build-lifecycle/</link>
+      <link>https://hoverruan.github.io/blog/2013/01/10/maven-build-lifecycle/</link>
       <pubDate>Thu, 10 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://hoverruan.github.io/posts/2013/01/10/maven-build-lifecycle/</guid>
+      <guid>https://hoverruan.github.io/blog/2013/01/10/maven-build-lifecycle/</guid>
       <description>三套构建生命周期 Maven有三套独立的Lifecycle：
 clean阶段: 项目清理阶段 default阶段: 默认阶段，大部分的编译、测试、打包和部署都在这个阶段完成 site阶段: 发布项目网站和文档阶段 每个Lifecycle还定义了按顺序执行的Phases，即从命令行指定执行的Phase，必然会先依次执行其前面的所有的Phase：
 如果你执行 mvn clean Maven实际上会依次执行 pre-clean 和 clean 两个Phase 如果执行 mvn install Maven实际上会依次执行Default阶段前面的所有的22个Phase 如果执行 mvn clean package Maven首先会依次执行Clean阶段的 pre-clean, clean，然后再依次执行Default阶段的 validate, initialize, … 一直到 package 等17个Phase 三套Lifecycle相互独立，所以在执行 mvn install 的时候，是不会触发任何的Clean阶段的动作的。
@@ -91,10 +91,10 @@ validate initialize generate-sources process-sources generate-resources process-
     
     <item>
       <title>Using Tomcat Maven Plugin for Local Development</title>
-      <link>https://hoverruan.github.io/posts/2013/01/06/using-tomcat-maven-plugin-for-local-development/</link>
+      <link>https://hoverruan.github.io/blog/2013/01/06/using-tomcat-maven-plugin-for-local-development/</link>
       <pubDate>Sun, 06 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://hoverruan.github.io/posts/2013/01/06/using-tomcat-maven-plugin-for-local-development/</guid>
+      <guid>https://hoverruan.github.io/blog/2013/01/06/using-tomcat-maven-plugin-for-local-development/</guid>
       <description>手动配置Tomcat服务器 在日常开发的过程中，我们经常需要配置一个本地的服务器进行本地的开发测试环境；以Tomcat服务器为例，配置的过程最少包含这样的一些步骤：
 下载并安装Tomcat服务器 在IDE中配置一个本地Tomcat的运行环境 用配置好的Tomcat运行环境来对项目进行开发和测试 如果你的项目使用Maven来进行管理，则每次你的pom.xml文件发生修改之后，IntelliJ IDEA会重新导入项目，原来对Web项目的特殊配置就会被重置成默认值，必须重新进行配置。
 使用Tomcat Maven Plugin Apache Tomcat Maven Plugin允许直接运行一个Web项目，无需额外下载安装Tomcat服务器，也无需在IDE中进行额外的配置，每次只需要一个简单的Maven命令即可启动一个Tomcat服务进行开发或者调试：
