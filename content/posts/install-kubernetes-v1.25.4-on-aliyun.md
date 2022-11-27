@@ -3,7 +3,8 @@ title: "在阿里云上安装 Kubernetes v1.25.4"
 date: 2022-11-26T22:30:37+08:00
 slug: 2022/11/26/install-kubernetes-v1.25.4-on-aliyun
 tags:
-- k8s
+- kubernetes
+- 阿里云
 ---
 
 本次测试安装最新的发布版本 v1.25.4。比较大的改动是从 v1.24 开始正式 [移除了对dockershim的支持](https://kubernetes.io/blog/2022/01/07/kubernetes-is-moving-on-from-dockershim/)，本文使用 [containerd](https://github.com/containerd/containerd) + [nerdctl](https://github.com/containerd/nerdctl) 来替代原来的 docker。
@@ -24,9 +25,9 @@ tags:
 基本思路：
 
 - 通过 nerdctl 的 [full distribution 发行版本](https://github.com/containerd/nerdctl/releases)，完成 `runc`、`containerd`、`CNI plugins` 等重要组件的安装，大大简化了安装过程
-  - 对 `containerd` 的配置改动：
-    - 默认的 `sandbox_image` 是 `k8s.gcr.io/pause:3.6`，改成跟 `kubeadm config images pull` 获取的版本一致：`registry.k8s.io/pause:3.8`
-    - 通过 `systemd` 来启动
+- 对 `containerd` 的配置改动有：
+  - 默认的 `sandbox_image` 是 `k8s.gcr.io/pause:3.6`，换成了 `registry.k8s.io/pause:3.8`，跟 `kubeadm config images pull` 获取的版本保持一致
+  - 通过 `systemd` 来启动
 - 执行 `yum install` 时指定具体的版本号，减少不确定性
 - 采用 `calico` 作为网络插件
 
