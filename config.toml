@@ -2,6 +2,7 @@ baseURL = 'https://hoverruan.github.io'
 languageCode = 'zh-cn'
 title = "HoverR's Blog"
 theme = 'beautifulhugo'
+googleAnalytics = 'UA-42017332-1'
 
 [permalinks]
 posts = '/blog/:slug'
