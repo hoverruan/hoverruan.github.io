@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>HoverR&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.107.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+      <link href="/index.xml" rel="alternate" type="application/rss+xml" title="HoverR&#39;s Blog" />
+      <link href="/index.xml" rel="feed" type="application/rss+xml" title="HoverR&#39;s Blog" />
+      
+    
+    
+    <meta property="og:title" content="HoverR&#39;s Blog" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hoverruan.me/" />
+
+<meta itemprop="name" content="HoverR&#39;s Blog">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HoverR&#39;s Blog"/>
+<meta name="twitter:description" content=""/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        HoverR&#39;s Blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          HoverR&#39;s Blog
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+ <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+    
+  </article>
+  
+  
+  
+  
+  
+  
+  
+    
+    
+
+    <div class="pa3 pa4-ns w-100 w-70-ns center">
+      
+       
+          <h1 class="flex-none">
+            Recent Posts
+          </h1>
+        
+
+      
+
+      <section class="w-100 mw8">
+        
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/install-kubernetes-v1.25.4-on-aliyun/" class="color-inherit dim link">
+            在阿里云上安装 Kubernetes v1.25.4
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          本次测试安装最新的发布版本 v1.25.4。比较大的改动是从 v1.24 开始正式 移除了对dockershim的支持，本文使用 containerd + nerdctl 来替代原来的 docker。
+之前操作系统都选择 CentOS 7.x，但是 7.x 的维护期也只是到2024年6月30日就结束了。后续的服务器操作系统打算切换到阿里云自己维护的 Alibaba Cloud Linux 上面，本次测试采用的服务器版本是 Alibaba Cloud Linux 3.2104。
+本次测试采取在墙外制作系统镜像、在墙内使用的策略，避免配置其他第三方的安装源：
+创建一台香港的ECS服务器 安装必要的系统软件 拉取 Kubernetes 集群所需的镜像 制作成阿里云的系统自定义镜像 将镜像复制到国内的区域 在国内区域基于上述镜像，配置 Kubernetes 集群 制作自定义镜像 基本思路：
+通过 nerdctl 的 full distribution 发行版本，完成 runc、containerd、CNI plugins 等重要组件的安装，大大简化了安装过程 对 containerd 的配置改动： 默认的 sandbox_image 是 k8s.gcr.io/pause:3.6，改成跟 kubeadm config images pull 获取的版本一致：registry.k8s.io/pause:3.8 通过 systemd 来启动 执行 yum install 时指定具体的版本号，减少不确定性 采用 calico 作为网络插件 通过下面的脚本，可以一键安装好所需的全部工具并拉取所有的镜像：
+#!/usr/bin/env bash sudo setenforce 0 sudo sed -i &#39;s/^SELINUX=enforcing$/SELINUX=permissive/&#39; /etc/selinux/config swapoff -a cat &lt;&lt;EOF | sudo tee /etc/modules-load.
+        </div>
+          <a href="/posts/install-kubernetes-v1.25.4-on-aliyun/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/2013/06/25/config-redis-replication-on-centos-5/" class="color-inherit dim link">
+            Config Redis Replication on Centos 5
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          安装 Redis 2.6.14 CentOS 5.4 Redis 2.6.14 下载并安装：
+$ wget http://redis.googlecode.com/files/redis-2.6.14.tar.gz $ cd redis-2.6.14 $ make $ sudo make install CentOS 5自带的Tcl版本是8.4，Redis的make test需要用到Tcl 8.5以上的版本，如果你需要运行测试用例，请先安装新版本的Tcl，然后再安装Redis：
+$ wget http://prdownloads.sourceforge.net/tcl/tcl8.6.0-src.tar.gz $ tar xzvf tcl8.6.0-src.tar.gz $ cd tcl8.6.0/unix $ ./configure $ make $ make test $ sudo make install 配置 Redis 服务 修复安装脚本 utils/install_server.sh 的问题 这个版本的安装脚本有一个小问题，请看 #909 Pull Request:
+@@ -159,7 +159,7 @@ REDIS_CHKCONFIG_INFO=\ # Description: Redis daemon\n ### END INIT INFO\n\n&#34; -if [ !
+        </div>
+          <a href="/posts/2013/06/25/config-redis-replication-on-centos-5/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/2013/06/21/using-maven-checkstyle-plugin/" class="color-inherit dim link">
+            Using Maven Checkstyle Plugin
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          为什么要统一代码风格？ 每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己， 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。
+在你的团队里面，如果每个人写代码的时候都按照自己的个性去写，结果一定很有趣，就像一个人写的字一样，一看就知道是张三的字； 这段代码一看就是李四的杰作，根本不需要在每个文件头注明 @author ！
+好吧，我并不觉得有趣，我的智商还不足以在面对不同风格的代码之间频繁切换的同时，还能集中精力去思考业务和逻辑问题， 我认为整洁的代码能够降低我的理解成本，从而用宝贵的时间去解决真正有价值的问题。
+编码规范与执行官 有一些开发团队也认为统一的代码风格很重要，意识到必须采用一些方法来规范所有的写代码的习惯，因此整理出一份符合团队习惯的 《编码规范》，可能是以 Microsoft Word 或者 PDF 的形式放在公共的文档服务器中，也可能是在开发团队内部 Wiki 上面一个 Page，总之，这是一份指导大家如果编码的强制性的规范。
+有了规范以后，怎样保证大家能够在日常的开发过程中严格遵守编码规范呢？这种事情靠大家自觉当然是不行的，都这么自觉的话，Team Leader 还有什么用？那是要丢饭碗的！所以他们必须承担执行官的责任，监督大家提交的代码是否符合规范，一旦发现有不上道的， 一定要在后面抽两鞭子，丫的，有规范竟然不执行！
+可是执行官还有别的事情要做啊，要看看有没有偷懒的、进度压得够不够紧、工作是否饱满，还有别的一堆日常规范要监督，可忙了； 而且，一个人去 Review 所有其他人的代码，这种事情还是挺累的，没办法只有降低频率，并且采取抽查的方式，这样依赖， 每个开发人员的代码在一个月能被 Review 到一次就不错了。
+自动化的代码风格检查 其实我们的 Team Leader 还是很靠谱的，他意识到这样下去不是办法，而且我们是优秀的程序员，难道就不能写个程序来自动地对 大家的代码进行检查吗？大家每次提交代码之前，先运行一次检查程序，没问题了再提交。图灵说了，所有能通过既定的步骤解决的问题， 都可以用图灵机来解决，目前我们所用到的计算机都是图灵机。
+幸好，Checkstyle 的作者们已经完成了这项工作，通过一个 Maven 的 Plugin 可以很方便的集成到我们日常的构建过程中：
+Maven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-checkstyle-plugin 的配置
+&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;/plugin&gt; 修改配置，使用自定义的 Checkstyle 配置文件；其中，${project.basedir}是指项目的根目录：
+&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;configuration&gt; &lt;configLocation&gt;${project.basedir}/conf/checkstyle.xml&lt;/configLocation&gt; &lt;/configuration&gt; &lt;/plugin&gt; 最后，我们还需要在检查到代码风格有问题的时候，让我们的构建过程失败：
+        </div>
+          <a href="/posts/2013/06/21/using-maven-checkstyle-plugin/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+      </section>
+
+      
+      <section class="w-100">
+        <h1 class="f3">More</h1>
+        
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/posts/2013/06/09/server-side-engineer-roadmap/" class="link black dim">
+              Server Side Engineer Roadmap
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/posts/2013/01/10/maven-build-lifecycle/" class="link black dim">
+              Maven Build Lifecycle
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/posts/2013/01/06/using-tomcat-maven-plugin-for-local-development/" class="link black dim">
+              Using Tomcat Maven Plugin for Local Development
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="/posts/2012/12/14/setup-my-blog-using-octopress/" class="link black dim">
+              Setup My Blog Using Octopress
+            </a>
+          </h2>
+        
+
+        
+        
+          <a href="/posts/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">All Posts</a>
+        
+        </section>
+      
+
+      </div>
+  
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://hoverruan.me/" >
+    &copy;  HoverR's Blog 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HoverR&#39;s Blog</title>
+    <link>https://hoverruan.me/</link>
+    <description>Recent content on HoverR&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 26 Nov 2022 22:30:37 +0800</lastBuildDate><atom:link href="https://hoverruan.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在阿里云上安装 Kubernetes v1.25.4</title>
+      <link>https://hoverruan.me/posts/install-kubernetes-v1.25.4-on-aliyun/</link>
+      <pubDate>Sat, 26 Nov 2022 22:30:37 +0800</pubDate>
+      
+      <guid>https://hoverruan.me/posts/install-kubernetes-v1.25.4-on-aliyun/</guid>
+      <description>本次测试安装最新的发布版本 v1.25.4。比较大的改动是从 v1.24 开始正式 移除了对dockershim的支持，本文使用 containerd + nerdctl 来替代原来的 docker。
+之前操作系统都选择 CentOS 7.x，但是 7.x 的维护期也只是到2024年6月30日就结束了。后续的服务器操作系统打算切换到阿里云自己维护的 Alibaba Cloud Linux 上面，本次测试采用的服务器版本是 Alibaba Cloud Linux 3.2104。
+本次测试采取在墙外制作系统镜像、在墙内使用的策略，避免配置其他第三方的安装源：
+创建一台香港的ECS服务器 安装必要的系统软件 拉取 Kubernetes 集群所需的镜像 制作成阿里云的系统自定义镜像 将镜像复制到国内的区域 在国内区域基于上述镜像，配置 Kubernetes 集群 制作自定义镜像 基本思路：
+通过 nerdctl 的 full distribution 发行版本，完成 runc、containerd、CNI plugins 等重要组件的安装，大大简化了安装过程 对 containerd 的配置改动： 默认的 sandbox_image 是 k8s.gcr.io/pause:3.6，改成跟 kubeadm config images pull 获取的版本一致：registry.k8s.io/pause:3.8 通过 systemd 来启动 执行 yum install 时指定具体的版本号，减少不确定性 采用 calico 作为网络插件 通过下面的脚本，可以一键安装好所需的全部工具并拉取所有的镜像：
+#!/usr/bin/env bash sudo setenforce 0 sudo sed -i &amp;#39;s/^SELINUX=enforcing$/SELINUX=permissive/&amp;#39; /etc/selinux/config swapoff -a cat &amp;lt;&amp;lt;EOF | sudo tee /etc/modules-load.</description>
+    </item>
+    
+    <item>
+      <title>Config Redis Replication on Centos 5</title>
+      <link>https://hoverruan.me/posts/2013/06/25/config-redis-replication-on-centos-5/</link>
+      <pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://hoverruan.me/posts/2013/06/25/config-redis-replication-on-centos-5/</guid>
+      <description>安装 Redis 2.6.14 CentOS 5.4 Redis 2.6.14 下载并安装：
+$ wget http://redis.googlecode.com/files/redis-2.6.14.tar.gz $ cd redis-2.6.14 $ make $ sudo make install CentOS 5自带的Tcl版本是8.4，Redis的make test需要用到Tcl 8.5以上的版本，如果你需要运行测试用例，请先安装新版本的Tcl，然后再安装Redis：
+$ wget http://prdownloads.sourceforge.net/tcl/tcl8.6.0-src.tar.gz $ tar xzvf tcl8.6.0-src.tar.gz $ cd tcl8.6.0/unix $ ./configure $ make $ make test $ sudo make install 配置 Redis 服务 修复安装脚本 utils/install_server.sh 的问题 这个版本的安装脚本有一个小问题，请看 #909 Pull Request:
+@@ -159,7 +159,7 @@ REDIS_CHKCONFIG_INFO=\ # Description: Redis daemon\n ### END INIT INFO\n\n&amp;#34; -if [ !</description>
+    </item>
+    
+    <item>
+      <title>Using Maven Checkstyle Plugin</title>
+      <link>https://hoverruan.me/posts/2013/06/21/using-maven-checkstyle-plugin/</link>
+      <pubDate>Fri, 21 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://hoverruan.me/posts/2013/06/21/using-maven-checkstyle-plugin/</guid>
+      <description>为什么要统一代码风格？ 每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己， 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。
+在你的团队里面，如果每个人写代码的时候都按照自己的个性去写，结果一定很有趣，就像一个人写的字一样，一看就知道是张三的字； 这段代码一看就是李四的杰作，根本不需要在每个文件头注明 @author ！
+好吧，我并不觉得有趣，我的智商还不足以在面对不同风格的代码之间频繁切换的同时，还能集中精力去思考业务和逻辑问题， 我认为整洁的代码能够降低我的理解成本，从而用宝贵的时间去解决真正有价值的问题。
+编码规范与执行官 有一些开发团队也认为统一的代码风格很重要，意识到必须采用一些方法来规范所有的写代码的习惯，因此整理出一份符合团队习惯的 《编码规范》，可能是以 Microsoft Word 或者 PDF 的形式放在公共的文档服务器中，也可能是在开发团队内部 Wiki 上面一个 Page，总之，这是一份指导大家如果编码的强制性的规范。
+有了规范以后，怎样保证大家能够在日常的开发过程中严格遵守编码规范呢？这种事情靠大家自觉当然是不行的，都这么自觉的话，Team Leader 还有什么用？那是要丢饭碗的！所以他们必须承担执行官的责任，监督大家提交的代码是否符合规范，一旦发现有不上道的， 一定要在后面抽两鞭子，丫的，有规范竟然不执行！
+可是执行官还有别的事情要做啊，要看看有没有偷懒的、进度压得够不够紧、工作是否饱满，还有别的一堆日常规范要监督，可忙了； 而且，一个人去 Review 所有其他人的代码，这种事情还是挺累的，没办法只有降低频率，并且采取抽查的方式，这样依赖， 每个开发人员的代码在一个月能被 Review 到一次就不错了。
+自动化的代码风格检查 其实我们的 Team Leader 还是很靠谱的，他意识到这样下去不是办法，而且我们是优秀的程序员，难道就不能写个程序来自动地对 大家的代码进行检查吗？大家每次提交代码之前，先运行一次检查程序，没问题了再提交。图灵说了，所有能通过既定的步骤解决的问题， 都可以用图灵机来解决，目前我们所用到的计算机都是图灵机。
+幸好，Checkstyle 的作者们已经完成了这项工作，通过一个 Maven 的 Plugin 可以很方便的集成到我们日常的构建过程中：
+Maven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-checkstyle-plugin 的配置
+&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-checkstyle-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.10&amp;lt;/version&amp;gt; &amp;lt;/plugin&amp;gt; 修改配置，使用自定义的 Checkstyle 配置文件；其中，${project.basedir}是指项目的根目录：
+&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-checkstyle-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.10&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;configLocation&amp;gt;${project.basedir}/conf/checkstyle.xml&amp;lt;/configLocation&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; 最后，我们还需要在检查到代码风格有问题的时候，让我们的构建过程失败：</description>
+    </item>
+    
+    <item>
+      <title>Server Side Engineer Roadmap</title>
+      <link>https://hoverruan.me/posts/2013/06/09/server-side-engineer-roadmap/</link>
+      <pubDate>Sun, 09 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://hoverruan.me/posts/2013/06/09/server-side-engineer-roadmap/</guid>
+      <description>到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。
+在实践中学习的效率是最高的，所以我们不会专门安排一段较长的时间专门给他们用于学习，通常我们要求他们用一天的时间搭建开发环境，然后第二天或者第三天就开始实际的编码。这听起来似乎有点残酷，或者说，新手能够在第二天就写出有用的代码吗？
+答案是可以的，因为我们采用了结对编程的实践，每个新手在一开始的时候，都由有经验的人带着一起Coding，包括从头创建一个项目，进行配置，创建必要的脚本，一起完成具体的业务需求，一起写测试，一起重构，并发布到服务器。经过这样的过程，新手也能在很短时间内，对整个服务器的开发流程有一个很具体的认知，因为这些都是他亲身经历的（新手通常在Pair的时候应该承担更多的实际的编码工作）。恐惧来源于未知，亲身经历过整个过程以后，开发的每一个方面对这曾经的新手来说，不再是未知的怪兽。
+当然，这个时候大部分人应该还只是知其然不知其所以然，“我知道怎么完成任务，但是我不知道他们运行的机制和原理”，有这种想法的工程师最少不是一个平庸的工程师，因为他有探索本质的欲望，这是很多优秀的工程师（以前喜欢说架构师，但是现在觉得工程师更贴切）的共同的特点，有更高的目标才能进步更快。
+应这些有追求的小伙子/小美女们的要求，在这里尝试整理一些学习的资料和学习路线图，帮助他们更快的成长！
+注：目前我们的技术Stack以Java为主，所以推荐的资料大部分都是Java Web相关的
+基础篇 这里提到的基础知识，我认为是必须掌握的。
+基础篇之Java 抽象类和抽象方法 Java面向对象中的继承、多态 集合工具包 List, Map, Set 的使用 多线程，锁机制 范型 基础篇之前端开发知识 HTML，HTML5 CSS JavaScript基本语法 基础篇之数据库 SQL语法 MySQL基本操作 提高篇 提高篇中提高的框架和知识点，掌握了之后对工作效率的提高有明显的效果。
+提高篇之相关知识点 HTTP协议 RESTful架构 Servlet和JSP规范 JPA规范 提高篇之软件框架 Spring Framework（IoC，MVC） Bootstrap jQuery AngularJS 提高篇之编码技能 《重构》 《代码整洁之道》 TDD 《测试驱动开发》 进阶篇 目前Web开发技术的发展速度越来越快，成熟的Spring + JPA + MySQL的组合的缺点越来越明显，他们对移动互联网的业务开发来说，有点太重了：
+Spring MVC尝试把所有的事情都在服务器端解决，但是现在前端框架的能力已经越来越强大，很多事情放在浏览器里面完成更方便，用户体验更好 打包之后动不动就几十M安装包、更新版本之后重启JVM需要漫长的等待，这些因素都跟现在的移动互联网的敏捷的开发周期不相符 使用到的第三方的依赖包有几十个，具体做什么事情不是特别清楚，发生问题时候，不同意定位 现在的趋势是后端只提供RESTful的接口，展现和控制逻辑完全在前端完成。
+Node.js Node.js利用Google Chrome的V8引擎来运行本地的JavaScript程序，构建快速、高并发的网络应用程序，他的优点是：
+采用事件驱动的模型，非常适合高并发、高IO访问、低CPU计算的应用，一台服务器可以轻松处理10万个并发请求 使用解释性的JavaScript，无需编译，适合快速开发、快速迭代 JavaScript语法对大部分工程师来说，是很容易上手的；同时，JavaScript也是前端开发的最主要的技能 JavaScript是目前最流行最前卫的语言，从Github上面的语言统计可以看出来:
+{% img /images/2013/06/github-top-languages.png %}
+Go Go 是Google在2007年发起的一个开源的服务器编程语言，有如下的优点：
+简单！表现在两方面，一是语法简单、清晰，Java、C++里面一些复杂的语法都不会出现在这里，你能在Go里面发现简洁的替代方式；另一方面是Go自身所带的库以清晰的结构提供了绝大部分所必需的功能 高性能。Go是编译成本地的二进制运行的，运行效率跟C是一个级别，是PHP之类的动态语言无法比拟的 优秀的并发编程模型，Go里面的Channel和Goroutine在进行并发业务开发的时候，无需担心内存共享中很麻烦的锁的问题；同时Go的并发模型可以有效的利用现代服务器硬件的多核资源 工程编译速度快，同样规模的Go项目，编译时间比C语言项目少很多 Go开发RESTful的服务的速度很快，跟使用PHP的开发效率差不多，并且在代码越来越多的时候，Go的优秀的工程管理优势会越来越明显。</description>
+    </item>
+    
+    <item>
+      <title>Maven Build Lifecycle</title>
+      <link>https://hoverruan.me/posts/2013/01/10/maven-build-lifecycle/</link>
+      <pubDate>Thu, 10 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://hoverruan.me/posts/2013/01/10/maven-build-lifecycle/</guid>
+      <description>三套构建生命周期 Maven有三套独立的Lifecycle：
+clean阶段: 项目清理阶段 default阶段: 默认阶段，大部分的编译、测试、打包和部署都在这个阶段完成 site阶段: 发布项目网站和文档阶段 每个Lifecycle还定义了按顺序执行的Phases，即从命令行指定执行的Phase，必然会先依次执行其前面的所有的Phase：
+如果你执行 mvn clean Maven实际上会依次执行 pre-clean 和 clean 两个Phase 如果执行 mvn install Maven实际上会依次执行Default阶段前面的所有的22个Phase 如果执行 mvn clean package Maven首先会依次执行Clean阶段的 pre-clean, clean，然后再依次执行Default阶段的 validate, initialize, … 一直到 package 等17个Phase 三套Lifecycle相互独立，所以在执行 mvn install 的时候，是不会触发任何的Clean阶段的动作的。
+** Clean阶段 **
+pre-clean clean post-clean ** Default阶段 **
+validate initialize generate-sources process-sources generate-resources process-resources compile process-classes generate-test-sources process-test-sources generate-test-resources process-test-resources test-compile process-test-classes test prepare-package package pre-integration-test integration-test post-integration-test verify install deploy Site阶段 pre-site site post-site site-deploy Lifecycle和Maven Plugin Maven的核心非常精简，除了核心的Lifecycle、Phase等过程的定义之外，所有的实际操作都是以Plugin的方式提供的。为了减少用户的配置，提高易用性，Maven在发布的时候，已经默认绑定了一些基本的plugin，可以完成大部分的编译、测试、打包和发布等操作。</description>
+    </item>
+    
+    <item>
+      <title>Using Tomcat Maven Plugin for Local Development</title>
+      <link>https://hoverruan.me/posts/2013/01/06/using-tomcat-maven-plugin-for-local-development/</link>
+      <pubDate>Sun, 06 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://hoverruan.me/posts/2013/01/06/using-tomcat-maven-plugin-for-local-development/</guid>
+      <description>手动配置Tomcat服务器 在日常开发的过程中，我们经常需要配置一个本地的服务器进行本地的开发测试环境；以Tomcat服务器为例，配置的过程最少包含这样的一些步骤：
+下载并安装Tomcat服务器 在IDE中配置一个本地Tomcat的运行环境 用配置好的Tomcat运行环境来对项目进行开发和测试 如果你的项目使用Maven来进行管理，则每次你的pom.xml文件发生修改之后，IntelliJ IDEA会重新导入项目，原来对Web项目的特殊配置就会被重置成默认值，必须重新进行配置。
+使用Tomcat Maven Plugin Apache Tomcat Maven Plugin允许直接运行一个Web项目，无需额外下载安装Tomcat服务器，也无需在IDE中进行额外的配置，每次只需要一个简单的Maven命令即可启动一个Tomcat服务进行开发或者调试：
+&amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.maven&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat6-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.0&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;path&amp;gt;/${project.build.finalName}&amp;lt;/path&amp;gt; &amp;lt;additionalClasspathDirs&amp;gt; &amp;lt;additionalClasspathDir&amp;gt;${project.basedir}/build/local&amp;lt;/additionalClasspathDir&amp;gt; &amp;lt;/additionalClasspathDirs&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; 只需执行以下命令即可启动服务：
+mvn tomcat6:run 当然，可以在IDE里面配置执行此Maven Goal，可以方便地启动或者调试。</description>
+    </item>
+    
+    <item>
+      <title>Setup My Blog Using Octopress</title>
+      <link>https://hoverruan.me/posts/2012/12/14/setup-my-blog-using-octopress/</link>
+      <pubDate>Fri, 14 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://hoverruan.me/posts/2012/12/14/setup-my-blog-using-octopress/</guid>
+      <description>今年ThoughtWorks开源大奖得主是Frank的作者Pete Hodgson, 在浏览其github主页时发现了他的博客Repository &amp;lt;Being Agile&amp;gt;，顿时眼前一亮，这正是我一直寻找的在Github上面搭建博客系统的理想方案！
+Octopress博客系统 这是基于Octopress的一个博客系统，是对著名的Github博客系统 Jekyll进行二次开发的衍生产品，对手机访问进行了很大的优化，同时比Jekyll看起来更像是一个传统的博客。前者的风格看起来实在有点太简单了，需要花一些功夫才能在Jekyll的基础上配置一个看上去比较顺眼的风格的博客，因此一直迟迟没有动手。
+GitHub Pages是Github又一个简单而强大的功能，包含免费的Hosting服务并且支持Theme功能。Github公司自己也使用Jekyll作为他们网站大部分页面的管理方案。
+怎么才能坚持写博客？ 我的第一个博客系统，是2009年在Google App Engine出来之后，自己用Java作为练手写的一个简单的博客发布程序：http://hoverblog.appspot.com/，尝试写了三篇文章之后就没有再更新了，一方面是因为翻墙不太方便，另一方面也是因为小孩的出生导致没有太多的时间去完善博客发布系统，因此就此搁下了。
+究其原因，尝试自己去实现一个博客发布系统应该是最大的障碍，一个功能完整的程序是需要花很多心思和时间的，weiboclient4j已经写了有一年多了，到现在都还没有实现全部的微博API 2.0的接口。如果目标是写博客，就应该用尽量简单的方案来实现这个目标，显然自己实现一个博客发布程序是最差的一种做法！
+SMART原则是目标管理中的一种方法，五个字母分别对应了五个英文单词：Specific（明确性）、Measurable（可衡量性）、Attainable（可达成性）、Relevant（相关性）和Time-bound（时限性）。SMART让任务目标更加具有可操作性，能够将目标转化具体的小目标和具体的工作安排。
+根据SMART指导原则，下面的一些目标应该可能帮助你更快地养成坚持写博客的习惯：
+在 1 ~ 2 周内选定一个简单易用的博客发布方案 在开始的前两个月，坚持每 2 ~ 3 周写一篇博客 希望我们都能坚持下来～</description>
+    </item>
+    
+  </channel>
+</rss>
