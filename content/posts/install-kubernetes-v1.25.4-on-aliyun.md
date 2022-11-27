@@ -1,6 +1,9 @@
 ---
 title: "在阿里云上安装 Kubernetes v1.25.4"
 date: 2022-11-26T22:30:37+08:00
+slug: 2022/11/26/install-kubernetes-v1.25.4-on-aliyun
+tags:
+- k8s
 ---
 
 本次测试安装最新的发布版本 v1.25.4。比较大的改动是从 v1.24 开始正式 [移除了对dockershim的支持](https://kubernetes.io/blog/2022/01/07/kubernetes-is-moving-on-from-dockershim/)，本文使用 [containerd](https://github.com/containerd/containerd) + [nerdctl](https://github.com/containerd/nerdctl) 来替代原来的 docker。
@@ -29,7 +32,7 @@ date: 2022-11-26T22:30:37+08:00
 
 通过下面的脚本，可以一键安装好所需的全部工具并拉取所有的镜像：
 
-```bash
+```shell
 #!/usr/bin/env bash
 
 sudo setenforce 0
@@ -94,7 +97,7 @@ curl https://raw.githubusercontent.com/projectcalico/calico/v3.24.5/manifests/ca
 
 下面是创建单节点集群的命令：
 
-```bash
+```shell
 kubeadm init --pod-network-cidr=192.168.0.0/16 \
   --service-cidr=10.96.0.0/12 \
   --kubernetes-version=v1.25.4
@@ -121,7 +124,7 @@ Kubernetes 多节点集群通常需要部署至少 3 个 `master` 节点（也�
 
 初始化命令：
 
-```bash
+```shell
 kubeadm init --control-plane-endpoint=k8smaster.k8s-in \
   --pod-network-cidr=192.168.0.0/16 \
   --service-cidr=10.96.0.0/12 \
@@ -177,7 +180,7 @@ k8s-master1   Ready    control-plane   21s     v1.25.4
 
 基于镜像创建第二台 master 节点的服务器，命名为 `k8s-master2`，执行加入集群操作。其中 `--control-plane` 参数表明要以 master 的身份加入集群：
 
-```bash
+```shell
 kubeadm join k8smaster.k8s-in:6443 \
   --token xnbtmw.bkb0epe6uiof6g3b \
   --discovery-token-ca-cert-hash sha256:82a830b608bf05f71867a182f5f305bda0c6ee447a1aa32ab9c1cd43af217851 \
@@ -197,7 +200,7 @@ k8s-master2   Ready    control-plane   33s     v1.25.4
 
 最后是添加 worker 节点的命令：
 
-```bash
+```shell
 kubeadm join k8smaster.k8s-in:6443 \
   --token xnbtmw.bkb0epe6uiof6g3b \
   --discovery-token-ca-cert-hash sha256:82a830b608bf05f71867a182f5f305bda0c6ee447a1aa32ab9c1cd43af217851

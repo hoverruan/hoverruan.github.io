@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Using Maven Checkstyle Plugin | HoverR&#39;s Blog</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="为什么要统一代码风格？ 每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己， 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Using Maven Checkstyle Plugin - HoverR&#39;s Blog</title>
+  <meta name="description" content="为什么要统一代码风格？ 每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己， 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。
 在你的团队里面，如果每个人写代码的时候都按照自己的个性去写，结果一定很有趣，就像一个人写的字一样，一看就知道是张三的字； 这段代码一看就是李四的杰作，根本不需要在每个文件头注明 @author ！
 好吧，我并不觉得有趣，我的智商还不足以在面对不同风格的代码之间频繁切换的同时，还能集中精力去思考业务和逻辑问题， 我认为整洁的代码能够降低我的理解成本，从而用宝贵的时间去解决真正有价值的问题。
 编码规范与执行官 有一些开发团队也认为统一的代码风格很重要，意识到必须采用一些方法来规范所有的写代码的习惯，因此整理出一份符合团队习惯的 《编码规范》，可能是以 Microsoft Word 或者 PDF 的形式放在公共的文档服务器中，也可能是在开发团队内部 Wiki 上面一个 Page，总之，这是一份指导大家如果编码的强制性的规范。
@@ -16,30 +18,76 @@
 幸好，Checkstyle 的作者们已经完成了这项工作，通过一个 Maven 的 Plugin 可以很方便的集成到我们日常的构建过程中：
 Maven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-checkstyle-plugin 的配置
 &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;/plugin&gt; 修改配置，使用自定义的 Checkstyle 配置文件；其中，${project.basedir}是指项目的根目录：
-&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;configuration&gt; &lt;configLocation&gt;${project.basedir}/conf/checkstyle.xml&lt;/configLocation&gt; &lt;/configuration&gt; &lt;/plugin&gt; 最后，我们还需要在检查到代码风格有问题的时候，让我们的构建过程失败：">
-    <meta name="generator" content="Hugo 0.107.0">
+&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;configuration&gt; &lt;configLocation&gt;${project.basedir}/conf/checkstyle.xml&lt;/configLocation&gt; &lt;/configuration&gt; &lt;/plugin&gt; 最后，我们还需要在检查到代码风格有问题的时候，让我们的构建过程失败："><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "HoverR\u0027s Blog",
     
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
+    "url": "https:\/\/hoverruan.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/hoverruan.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/hoverruan.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/hoverruan.github.io\/posts\/2013\/06\/21\/using-maven-checkstyle-plugin\/",
+          "name": "Using maven checkstyle plugin"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Using Maven Checkstyle Plugin",
+  "description" : "为什么要统一代码风格？ 每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己， 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。\n在你的团队里面，如果每个人写代码的时候都按照自己的个性去写，结果一定很有趣，就像一个人写的字一样，一看就知道是张三的字； 这段代码一看就是李四的杰作，根本不需要在每个文件头注明 @author ！\n好吧，我并不觉得有趣，我的智商还不足以在面对不同风格的代码之间频繁切换的同时，还能集中精力去思考业务和逻辑问题， 我认为整洁的代码能够降低我的理解成本，从而用宝贵的时间去解决真正有价值的问题。\n编码规范与执行官 有一些开发团队也认为统一的代码风格很重要，意识到必须采用一些方法来规范所有的写代码的习惯，因此整理出一份符合团队习惯的 《编码规范》，可能是以 Microsoft Word 或者 PDF 的形式放在公共的文档服务器中，也可能是在开发团队内部 Wiki 上面一个 Page，总之，这是一份指导大家如果编码的强制性的规范。\n有了规范以后，怎样保证大家能够在日常的开发过程中严格遵守编码规范呢？这种事情靠大家自觉当然是不行的，都这么自觉的话，Team Leader 还有什么用？那是要丢饭碗的！所以他们必须承担执行官的责任，监督大家提交的代码是否符合规范，一旦发现有不上道的， 一定要在后面抽两鞭子，丫的，有规范竟然不执行！\n可是执行官还有别的事情要做啊，要看看有没有偷懒的、进度压得够不够紧、工作是否饱满，还有别的一堆日常规范要监督，可忙了； 而且，一个人去 Review 所有其他人的代码，这种事情还是挺累的，没办法只有降低频率，并且采取抽查的方式，这样依赖， 每个开发人员的代码在一个月能被 Review 到一次就不错了。\n自动化的代码风格检查 其实我们的 Team Leader 还是很靠谱的，他意识到这样下去不是办法，而且我们是优秀的程序员，难道就不能写个程序来自动地对 大家的代码进行检查吗？大家每次提交代码之前，先运行一次检查程序，没问题了再提交。图灵说了，所有能通过既定的步骤解决的问题， 都可以用图灵机来解决，目前我们所用到的计算机都是图灵机。\n幸好，Checkstyle 的作者们已经完成了这项工作，通过一个 Maven 的 Plugin 可以很方便的集成到我们日常的构建过程中：\nMaven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-checkstyle-plugin 的配置\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;\/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-checkstyle-plugin\u0026lt;\/artifactId\u0026gt; \u0026lt;version\u0026gt;2.10\u0026lt;\/version\u0026gt; \u0026lt;\/plugin\u0026gt; 修改配置，使用自定义的 Checkstyle 配置文件；其中，${project.basedir}是指项目的根目录：\n\u0026lt;plugin\u0026gt; \u0026lt;groupId\u0026gt;org.apache.maven.plugins\u0026lt;\/groupId\u0026gt; \u0026lt;artifactId\u0026gt;maven-checkstyle-plugin\u0026lt;\/artifactId\u0026gt; \u0026lt;version\u0026gt;2.10\u0026lt;\/version\u0026gt; \u0026lt;configuration\u0026gt; \u0026lt;configLocation\u0026gt;${project.basedir}\/conf\/checkstyle.xml\u0026lt;\/configLocation\u0026gt; \u0026lt;\/configuration\u0026gt; \u0026lt;\/plugin\u0026gt; 最后，我们还需要在检查到代码风格有问题的时候，让我们的构建过程失败：",
+  "inLanguage" : "en",
+  "wordCount":  93 ,
+  "datePublished" : "2013-06-21T00:00:00",
+  "dateModified" : "2013-06-21T00:00:00",
+  "image" : "https:\/\/hoverruan.github.io",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/hoverruan.github.io\/posts\/2013\/06\/21\/using-maven-checkstyle-plugin\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/hoverruan.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/hoverruan.github.io",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-    
-    
-      
-
-    
-
-    
-    
-    <meta property="og:title" content="Using Maven Checkstyle Plugin" />
+<meta property="og:title" content="Using Maven Checkstyle Plugin" />
 <meta property="og:description" content="为什么要统一代码风格？ 每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己， 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。
 在你的团队里面，如果每个人写代码的时候都按照自己的个性去写，结果一定很有趣，就像一个人写的字一样，一看就知道是张三的字； 这段代码一看就是李四的杰作，根本不需要在每个文件头注明 @author ！
 好吧，我并不觉得有趣，我的智商还不足以在面对不同风格的代码之间频繁切换的同时，还能集中精力去思考业务和逻辑问题， 我认为整洁的代码能够降低我的理解成本，从而用宝贵的时间去解决真正有价值的问题。
@@ -50,112 +98,144 @@ Maven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-che
 幸好，Checkstyle 的作者们已经完成了这项工作，通过一个 Maven 的 Plugin 可以很方便的集成到我们日常的构建过程中：
 Maven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-checkstyle-plugin 的配置
 &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;/plugin&gt; 修改配置，使用自定义的 Checkstyle 配置文件；其中，${project.basedir}是指项目的根目录：
-&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;configuration&gt; &lt;configLocation&gt;${project.basedir}/conf/checkstyle.xml&lt;/configLocation&gt; &lt;/configuration&gt; &lt;/plugin&gt; 最后，我们还需要在检查到代码风格有问题的时候，让我们的构建过程失败：" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://hoverruan.me/posts/2013/06/21/using-maven-checkstyle-plugin/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2013-06-21T00:00:00+00:00" />
-<meta property="article:modified_time" content="2013-06-21T00:00:00+00:00" />
+&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;configuration&gt; &lt;configLocation&gt;${project.basedir}/conf/checkstyle.xml&lt;/configLocation&gt; &lt;/configuration&gt; &lt;/plugin&gt; 最后，我们还需要在检查到代码风格有问题的时候，让我们的构建过程失败：">
+<meta property="og:url" content="https://hoverruan.github.io/posts/2013/06/21/using-maven-checkstyle-plugin/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="HoverR&#39;s Blog" />
 
-<meta itemprop="name" content="Using Maven Checkstyle Plugin">
-<meta itemprop="description" content="为什么要统一代码风格？ 每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己， 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。
-在你的团队里面，如果每个人写代码的时候都按照自己的个性去写，结果一定很有趣，就像一个人写的字一样，一看就知道是张三的字； 这段代码一看就是李四的杰作，根本不需要在每个文件头注明 @author ！
-好吧，我并不觉得有趣，我的智商还不足以在面对不同风格的代码之间频繁切换的同时，还能集中精力去思考业务和逻辑问题， 我认为整洁的代码能够降低我的理解成本，从而用宝贵的时间去解决真正有价值的问题。
-编码规范与执行官 有一些开发团队也认为统一的代码风格很重要，意识到必须采用一些方法来规范所有的写代码的习惯，因此整理出一份符合团队习惯的 《编码规范》，可能是以 Microsoft Word 或者 PDF 的形式放在公共的文档服务器中，也可能是在开发团队内部 Wiki 上面一个 Page，总之，这是一份指导大家如果编码的强制性的规范。
-有了规范以后，怎样保证大家能够在日常的开发过程中严格遵守编码规范呢？这种事情靠大家自觉当然是不行的，都这么自觉的话，Team Leader 还有什么用？那是要丢饭碗的！所以他们必须承担执行官的责任，监督大家提交的代码是否符合规范，一旦发现有不上道的， 一定要在后面抽两鞭子，丫的，有规范竟然不执行！
-可是执行官还有别的事情要做啊，要看看有没有偷懒的、进度压得够不够紧、工作是否饱满，还有别的一堆日常规范要监督，可忙了； 而且，一个人去 Review 所有其他人的代码，这种事情还是挺累的，没办法只有降低频率，并且采取抽查的方式，这样依赖， 每个开发人员的代码在一个月能被 Review 到一次就不错了。
-自动化的代码风格检查 其实我们的 Team Leader 还是很靠谱的，他意识到这样下去不是办法，而且我们是优秀的程序员，难道就不能写个程序来自动地对 大家的代码进行检查吗？大家每次提交代码之前，先运行一次检查程序，没问题了再提交。图灵说了，所有能通过既定的步骤解决的问题， 都可以用图灵机来解决，目前我们所用到的计算机都是图灵机。
-幸好，Checkstyle 的作者们已经完成了这项工作，通过一个 Maven 的 Plugin 可以很方便的集成到我们日常的构建过程中：
-Maven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-checkstyle-plugin 的配置
-&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;/plugin&gt; 修改配置，使用自定义的 Checkstyle 配置文件；其中，${project.basedir}是指项目的根目录：
-&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;configuration&gt; &lt;configLocation&gt;${project.basedir}/conf/checkstyle.xml&lt;/configLocation&gt; &lt;/configuration&gt; &lt;/plugin&gt; 最后，我们还需要在检查到代码风格有问题的时候，让我们的构建过程失败："><meta itemprop="datePublished" content="2013-06-21T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2013-06-21T00:00:00+00:00" />
-<meta itemprop="wordCount" content="93">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Using Maven Checkstyle Plugin"/>
-<meta name="twitter:description" content="为什么要统一代码风格？ 每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己， 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。
-在你的团队里面，如果每个人写代码的时候都按照自己的个性去写，结果一定很有趣，就像一个人写的字一样，一看就知道是张三的字； 这段代码一看就是李四的杰作，根本不需要在每个文件头注明 @author ！
-好吧，我并不觉得有趣，我的智商还不足以在面对不同风格的代码之间频繁切换的同时，还能集中精力去思考业务和逻辑问题， 我认为整洁的代码能够降低我的理解成本，从而用宝贵的时间去解决真正有价值的问题。
-编码规范与执行官 有一些开发团队也认为统一的代码风格很重要，意识到必须采用一些方法来规范所有的写代码的习惯，因此整理出一份符合团队习惯的 《编码规范》，可能是以 Microsoft Word 或者 PDF 的形式放在公共的文档服务器中，也可能是在开发团队内部 Wiki 上面一个 Page，总之，这是一份指导大家如果编码的强制性的规范。
-有了规范以后，怎样保证大家能够在日常的开发过程中严格遵守编码规范呢？这种事情靠大家自觉当然是不行的，都这么自觉的话，Team Leader 还有什么用？那是要丢饭碗的！所以他们必须承担执行官的责任，监督大家提交的代码是否符合规范，一旦发现有不上道的， 一定要在后面抽两鞭子，丫的，有规范竟然不执行！
-可是执行官还有别的事情要做啊，要看看有没有偷懒的、进度压得够不够紧、工作是否饱满，还有别的一堆日常规范要监督，可忙了； 而且，一个人去 Review 所有其他人的代码，这种事情还是挺累的，没办法只有降低频率，并且采取抽查的方式，这样依赖， 每个开发人员的代码在一个月能被 Review 到一次就不错了。
-自动化的代码风格检查 其实我们的 Team Leader 还是很靠谱的，他意识到这样下去不是办法，而且我们是优秀的程序员，难道就不能写个程序来自动地对 大家的代码进行检查吗？大家每次提交代码之前，先运行一次检查程序，没问题了再提交。图灵说了，所有能通过既定的步骤解决的问题， 都可以用图灵机来解决，目前我们所用到的计算机都是图灵机。
-幸好，Checkstyle 的作者们已经完成了这项工作，通过一个 Maven 的 Plugin 可以很方便的集成到我们日常的构建过程中：
-Maven Checkstyle Plugin 的使用 首先，在你的 pom.xml 里加入 maven-checkstyle-plugin 的配置
-&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;/plugin&gt; 修改配置，使用自定义的 Checkstyle 配置文件；其中，${project.basedir}是指项目的根目录：
-&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt; &lt;version&gt;2.10&lt;/version&gt; &lt;configuration&gt; &lt;configLocation&gt;${project.basedir}/conf/checkstyle.xml&lt;/configLocation&gt; &lt;/configuration&gt; &lt;/plugin&gt; 最后，我们还需要在检查到代码风格有问题的时候，让我们的构建过程失败："/>
+  <meta name="twitter:title" content="Using Maven Checkstyle Plugin" />
+  <meta name="twitter:description" content="为什么要统一代码风格？ 每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己， 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。
+在你的团队里面，如果每个人写代码的时候都按照自己的个性去写，结果一定很有趣，就像一个人写的字一样，一看就知道是张三的字； 这段代码 …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.107.0">
+  <link rel="alternate" href="https://hoverruan.github.io/index.xml" type="application/rss+xml" title="HoverR&#39;s Blog"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://hoverruan.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://hoverruan.github.io/css/syntax.css" /><link rel="stylesheet" href="https://hoverruan.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
-	
   </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://hoverruan.github.io">HoverR&#39;s Blog</a>
+    </div>
 
-  <body class="ma0 avenir bg-near-white">
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+      </ul>
+    </div>
 
     
-   
-  
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        HoverR&#39;s Blog
-      
-    </a>
-    <div class="flex-l items-center">
-      
-
-      
-      
-<div class="ananke-socials">
-  
-</div>
-
-    </div>
   </div>
 </nav>
 
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
     </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>Using Maven Checkstyle Plugin</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
   </header>
 
 
-
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked">
-          
-        POSTS
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
     
-  </div>
-
-
-      <h1 class="f1 athelas mt3 mb1">Using Maven Checkstyle Plugin</h1>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2013-06-21T00:00:00Z">June 21, 2013</time>
-      
-
-      
-      
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="为什么要统一代码风格">为什么要统一代码风格？</h2>
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h2 id="为什么要统一代码风格">为什么要统一代码风格？</h2>
 <p>每个人都有自己喜欢的代码风格，萝卜生菜各有所爱，属于个人的喜好问题。就像穿衣打扮一样，有些人按照自己的审美观来打扮自己，
 也有些人是为了凸显自己的与众不同与个性，还有些不爱收拾、怎么舒服怎么方便就怎么穿的。正是因为不同，我们的世界才是多姿多彩。</p>
 <p>在你的团队里面，如果每个人写代码的时候都按照自己的个性去写，结果一定很有趣，就像一个人写的字一样，一看就知道是张三的字；
@@ -214,37 +294,84 @@ Leader 还有什么用？那是要丢饭碗的！所以他们必须承担执行�
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/plugin&gt;</span>
 </span></span></code></pre></div><p>检查的错误信息可以直接查看生成的 <code>checkstyle-results.xml</code> 文件：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ less target/checkstyle-results.xml
-</span></span></code></pre></div><ul class="pa0">
-  
-</ul>
-<div class="mt6 instapaper_ignoref">
+</span></span></code></pre></div>
+
+        
+
+        
+
+        
+      </article>
+
       
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://hoverruan.github.io/posts/2013/06/09/server-side-engineer-roadmap/" data-toggle="tooltip" data-placement="top" title="Server Side Engineer Roadmap">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://hoverruan.github.io/posts/2013/06/25/config-redis-replication-on-centos-5/" data-toggle="tooltip" data-placement="top" title="Config Redis Replication on Centos 5">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
       
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2022
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://hoverruan.github.io">HoverR&#39;s Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.107.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
       </div>
     </div>
-
-    <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://hoverruan.me/" >
-    &copy;  HoverR's Blog 2022 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-</div>
-</div>
   </div>
-</footer>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<script src="https://hoverruan.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://hoverruan.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
   </body>
 </html>
+

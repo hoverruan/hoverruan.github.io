@@ -2,35 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hoverruan.me/</loc>
+    <loc>https://hoverruan.github.io/</loc>
     <lastmod>2022-11-26T22:30:37+08:00</lastmod>
   </url><url>
-    <loc>https://hoverruan.me/posts/</loc>
+    <loc>https://hoverruan.github.io/tags/k8s/</loc>
     <lastmod>2022-11-26T22:30:37+08:00</lastmod>
   </url><url>
-    <loc>https://hoverruan.me/posts/install-kubernetes-v1.25.4-on-aliyun/</loc>
+    <loc>https://hoverruan.github.io/posts/</loc>
     <lastmod>2022-11-26T22:30:37+08:00</lastmod>
   </url><url>
-    <loc>https://hoverruan.me/posts/2013/06/25/config-redis-replication-on-centos-5/</loc>
+    <loc>https://hoverruan.github.io/tags/</loc>
+    <lastmod>2022-11-26T22:30:37+08:00</lastmod>
+  </url><url>
+    <loc>https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</loc>
+    <lastmod>2022-11-26T22:30:37+08:00</lastmod>
+  </url><url>
+    <loc>https://hoverruan.github.io/posts/2013/06/25/config-redis-replication-on-centos-5/</loc>
     <lastmod>2013-06-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hoverruan.me/posts/2013/06/21/using-maven-checkstyle-plugin/</loc>
+    <loc>https://hoverruan.github.io/posts/2013/06/21/using-maven-checkstyle-plugin/</loc>
     <lastmod>2013-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hoverruan.me/posts/2013/06/09/server-side-engineer-roadmap/</loc>
+    <loc>https://hoverruan.github.io/posts/2013/06/09/server-side-engineer-roadmap/</loc>
     <lastmod>2013-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hoverruan.me/posts/2013/01/10/maven-build-lifecycle/</loc>
+    <loc>https://hoverruan.github.io/posts/2013/01/10/maven-build-lifecycle/</loc>
     <lastmod>2013-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hoverruan.me/posts/2013/01/06/using-tomcat-maven-plugin-for-local-development/</loc>
+    <loc>https://hoverruan.github.io/posts/2013/01/06/using-tomcat-maven-plugin-for-local-development/</loc>
     <lastmod>2013-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hoverruan.me/posts/2012/12/14/setup-my-blog-using-octopress/</loc>
-    <lastmod>2012-12-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hoverruan.me/categories/</loc>
-  </url><url>
-    <loc>https://hoverruan.me/tags/</loc>
+    <loc>https://hoverruan.github.io/categories/</loc>
   </url>
 </urlset>

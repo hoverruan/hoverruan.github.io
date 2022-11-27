@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s on HoverR&#39;s Blog</title>
+    <link>https://hoverruan.github.io/tags/k8s/</link>
+    <description>Recent content in k8s on HoverR&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 26 Nov 2022 22:30:37 +0800</lastBuildDate><atom:link href="https://hoverruan.github.io/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在阿里云上安装 Kubernetes v1.25.4</title>
+      <link>https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</link>
+      <pubDate>Sat, 26 Nov 2022 22:30:37 +0800</pubDate>
+      
+      <guid>https://hoverruan.github.io/posts/2022/11/26/install-kubernetes-v1.25.4-on-aliyun/</guid>
+      <description>本次测试安装最新的发布版本 v1.25.4。比较大的改动是从 v1.24 开始正式 移除了对dockershim的支持，本文使用 containerd + nerdctl 来替代原来的 docker。
+之前操作系统都选择 CentOS 7.x，但是 7.x 的维护期也只是到2024年6月30日就结束了。后续的服务器操作系统打算切换到阿里云自己维护的 Alibaba Cloud Linux 上面，本次测试采用的服务器版本是 Alibaba Cloud Linux 3.2104。
+本次测试采取在墙外制作系统镜像、在墙内使用的策略，避免配置其他第三方的安装源：
+创建一台香港的ECS服务器 安装必要的系统软件 拉取 Kubernetes 集群所需的镜像 制作成阿里云的系统自定义镜像 将镜像复制到国内的区域 在国内区域基于上述镜像，配置 Kubernetes 集群 制作自定义镜像 基本思路：
+通过 nerdctl 的 full distribution 发行版本，完成 runc、containerd、CNI plugins 等重要组件的安装，大大简化了安装过程 对 containerd 的配置改动： 默认的 sandbox_image 是 k8s.gcr.io/pause:3.6，改成跟 kubeadm config images pull 获取的版本一致：registry.k8s.io/pause:3.8 通过 systemd 来启动 执行 yum install 时指定具体的版本号，减少不确定性 采用 calico 作为网络插件 通过下面的脚本，可以一键安装好所需的全部工具并拉取所有的镜像：
+#!/usr/bin/env bash sudo setenforce 0 sudo sed -i &amp;#39;s/^SELINUX=enforcing$/SELINUX=permissive/&amp;#39; /etc/selinux/config swapoff -a cat &amp;lt;&amp;lt;EOF | sudo tee /etc/modules-load.</description>
+    </item>
+    
+  </channel>
+</rss>

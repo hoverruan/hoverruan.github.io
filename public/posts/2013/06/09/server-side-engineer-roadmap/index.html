@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Server Side Engineer Roadmap | HoverR&#39;s Blog</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Server Side Engineer Roadmap - HoverR&#39;s Blog</title>
+  <meta name="description" content="到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。
 在实践中学习的效率是最高的，所以我们不会专门安排一段较长的时间专门给他们用于学习，通常我们要求他们用一天的时间搭建开发环境，然后第二天或者第三天就开始实际的编码。这听起来似乎有点残酷，或者说，新手能够在第二天就写出有用的代码吗？
 答案是可以的，因为我们采用了结对编程的实践，每个新手在一开始的时候，都由有经验的人带着一起Coding，包括从头创建一个项目，进行配置，创建必要的脚本，一起完成具体的业务需求，一起写测试，一起重构，并发布到服务器。经过这样的过程，新手也能在很短时间内，对整个服务器的开发流程有一个很具体的认知，因为这些都是他亲身经历的（新手通常在Pair的时候应该承担更多的实际的编码工作）。恐惧来源于未知，亲身经历过整个过程以后，开发的每一个方面对这曾经的新手来说，不再是未知的怪兽。
 当然，这个时候大部分人应该还只是知其然不知其所以然，“我知道怎么完成任务，但是我不知道他们运行的机制和原理”，有这种想法的工程师最少不是一个平庸的工程师，因为他有探索本质的欲望，这是很多优秀的工程师（以前喜欢说架构师，但是现在觉得工程师更贴切）的共同的特点，有更高的目标才能进步更快。
@@ -20,30 +22,76 @@ Node.js Node.js利用Google Chrome的V8引擎来运行本地的JavaScript程序�
 采用事件驱动的模型，非常适合高并发、高IO访问、低CPU计算的应用，一台服务器可以轻松处理10万个并发请求 使用解释性的JavaScript，无需编译，适合快速开发、快速迭代 JavaScript语法对大部分工程师来说，是很容易上手的；同时，JavaScript也是前端开发的最主要的技能 JavaScript是目前最流行最前卫的语言，从Github上面的语言统计可以看出来:
 {% img /images/2013/06/github-top-languages.png %}
 Go Go 是Google在2007年发起的一个开源的服务器编程语言，有如下的优点：
-简单！表现在两方面，一是语法简单、清晰，Java、C&#43;&#43;里面一些复杂的语法都不会出现在这里，你能在Go里面发现简洁的替代方式；另一方面是Go自身所带的库以清晰的结构提供了绝大部分所必需的功能 高性能。Go是编译成本地的二进制运行的，运行效率跟C是一个级别，是PHP之类的动态语言无法比拟的 优秀的并发编程模型，Go里面的Channel和Goroutine在进行并发业务开发的时候，无需担心内存共享中很麻烦的锁的问题；同时Go的并发模型可以有效的利用现代服务器硬件的多核资源 工程编译速度快，同样规模的Go项目，编译时间比C语言项目少很多 Go开发RESTful的服务的速度很快，跟使用PHP的开发效率差不多，并且在代码越来越多的时候，Go的优秀的工程管理优势会越来越明显。">
-    <meta name="generator" content="Hugo 0.107.0">
+简单！表现在两方面，一是语法简单、清晰，Java、C&#43;&#43;里面一些复杂的语法都不会出现在这里，你能在Go里面发现简洁的替代方式；另一方面是Go自身所带的库以清晰的结构提供了绝大部分所必需的功能 高性能。Go是编译成本地的二进制运行的，运行效率跟C是一个级别，是PHP之类的动态语言无法比拟的 优秀的并发编程模型，Go里面的Channel和Goroutine在进行并发业务开发的时候，无需担心内存共享中很麻烦的锁的问题；同时Go的并发模型可以有效的利用现代服务器硬件的多核资源 工程编译速度快，同样规模的Go项目，编译时间比C语言项目少很多 Go开发RESTful的服务的速度很快，跟使用PHP的开发效率差不多，并且在代码越来越多的时候，Go的优秀的工程管理优势会越来越明显。"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "HoverR\u0027s Blog",
     
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
+    "url": "https:\/\/hoverruan.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/hoverruan.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/hoverruan.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/hoverruan.github.io\/posts\/2013\/06\/09\/server-side-engineer-roadmap\/",
+          "name": "Server side engineer roadmap"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Server Side Engineer Roadmap",
+  "description" : "到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。\n在实践中学习的效率是最高的，所以我们不会专门安排一段较长的时间专门给他们用于学习，通常我们要求他们用一天的时间搭建开发环境，然后第二天或者第三天就开始实际的编码。这听起来似乎有点残酷，或者说，新手能够在第二天就写出有用的代码吗？\n答案是可以的，因为我们采用了结对编程的实践，每个新手在一开始的时候，都由有经验的人带着一起Coding，包括从头创建一个项目，进行配置，创建必要的脚本，一起完成具体的业务需求，一起写测试，一起重构，并发布到服务器。经过这样的过程，新手也能在很短时间内，对整个服务器的开发流程有一个很具体的认知，因为这些都是他亲身经历的（新手通常在Pair的时候应该承担更多的实际的编码工作）。恐惧来源于未知，亲身经历过整个过程以后，开发的每一个方面对这曾经的新手来说，不再是未知的怪兽。\n当然，这个时候大部分人应该还只是知其然不知其所以然，“我知道怎么完成任务，但是我不知道他们运行的机制和原理”，有这种想法的工程师最少不是一个平庸的工程师，因为他有探索本质的欲望，这是很多优秀的工程师（以前喜欢说架构师，但是现在觉得工程师更贴切）的共同的特点，有更高的目标才能进步更快。\n应这些有追求的小伙子\/小美女们的要求，在这里尝试整理一些学习的资料和学习路线图，帮助他们更快的成长！\n注：目前我们的技术Stack以Java为主，所以推荐的资料大部分都是Java Web相关的\n基础篇 这里提到的基础知识，我认为是必须掌握的。\n基础篇之Java 抽象类和抽象方法 Java面向对象中的继承、多态 集合工具包 List, Map, Set 的使用 多线程，锁机制 范型 基础篇之前端开发知识 HTML，HTML5 CSS JavaScript基本语法 基础篇之数据库 SQL语法 MySQL基本操作 提高篇 提高篇中提高的框架和知识点，掌握了之后对工作效率的提高有明显的效果。\n提高篇之相关知识点 HTTP协议 RESTful架构 Servlet和JSP规范 JPA规范 提高篇之软件框架 Spring Framework（IoC，MVC） Bootstrap jQuery AngularJS 提高篇之编码技能 《重构》 《代码整洁之道》 TDD 《测试驱动开发》 进阶篇 目前Web开发技术的发展速度越来越快，成熟的Spring \u002b JPA \u002b MySQL的组合的缺点越来越明显，他们对移动互联网的业务开发来说，有点太重了：\nSpring MVC尝试把所有的事情都在服务器端解决，但是现在前端框架的能力已经越来越强大，很多事情放在浏览器里面完成更方便，用户体验更好 打包之后动不动就几十M安装包、更新版本之后重启JVM需要漫长的等待，这些因素都跟现在的移动互联网的敏捷的开发周期不相符 使用到的第三方的依赖包有几十个，具体做什么事情不是特别清楚，发生问题时候，不同意定位 现在的趋势是后端只提供RESTful的接口，展现和控制逻辑完全在前端完成。\nNode.js Node.js利用Google Chrome的V8引擎来运行本地的JavaScript程序，构建快速、高并发的网络应用程序，他的优点是：\n采用事件驱动的模型，非常适合高并发、高IO访问、低CPU计算的应用，一台服务器可以轻松处理10万个并发请求 使用解释性的JavaScript，无需编译，适合快速开发、快速迭代 JavaScript语法对大部分工程师来说，是很容易上手的；同时，JavaScript也是前端开发的最主要的技能 JavaScript是目前最流行最前卫的语言，从Github上面的语言统计可以看出来:\n{% img \/images\/2013\/06\/github-top-languages.png %}\nGo Go 是Google在2007年发起的一个开源的服务器编程语言，有如下的优点：\n简单！表现在两方面，一是语法简单、清晰，Java、C\u002b\u002b里面一些复杂的语法都不会出现在这里，你能在Go里面发现简洁的替代方式；另一方面是Go自身所带的库以清晰的结构提供了绝大部分所必需的功能 高性能。Go是编译成本地的二进制运行的，运行效率跟C是一个级别，是PHP之类的动态语言无法比拟的 优秀的并发编程模型，Go里面的Channel和Goroutine在进行并发业务开发的时候，无需担心内存共享中很麻烦的锁的问题；同时Go的并发模型可以有效的利用现代服务器硬件的多核资源 工程编译速度快，同样规模的Go项目，编译时间比C语言项目少很多 Go开发RESTful的服务的速度很快，跟使用PHP的开发效率差不多，并且在代码越来越多的时候，Go的优秀的工程管理优势会越来越明显。",
+  "inLanguage" : "en",
+  "wordCount":  83 ,
+  "datePublished" : "2013-06-09T00:00:00",
+  "dateModified" : "2013-06-09T00:00:00",
+  "image" : "https:\/\/hoverruan.github.io",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/hoverruan.github.io\/posts\/2013\/06\/09\/server-side-engineer-roadmap\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/hoverruan.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/hoverruan.github.io",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-    
-    
-      
-
-    
-
-    
-    
-    <meta property="og:title" content="Server Side Engineer Roadmap" />
+<meta property="og:title" content="Server Side Engineer Roadmap" />
 <meta property="og:description" content="到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。
 在实践中学习的效率是最高的，所以我们不会专门安排一段较长的时间专门给他们用于学习，通常我们要求他们用一天的时间搭建开发环境，然后第二天或者第三天就开始实际的编码。这听起来似乎有点残酷，或者说，新手能够在第二天就写出有用的代码吗？
 答案是可以的，因为我们采用了结对编程的实践，每个新手在一开始的时候，都由有经验的人带着一起Coding，包括从头创建一个项目，进行配置，创建必要的脚本，一起完成具体的业务需求，一起写测试，一起重构，并发布到服务器。经过这样的过程，新手也能在很短时间内，对整个服务器的开发流程有一个很具体的认知，因为这些都是他亲身经历的（新手通常在Pair的时候应该承担更多的实际的编码工作）。恐惧来源于未知，亲身经历过整个过程以后，开发的每一个方面对这曾经的新手来说，不再是未知的怪兽。
@@ -58,120 +106,144 @@ Node.js Node.js利用Google Chrome的V8引擎来运行本地的JavaScript程序�
 采用事件驱动的模型，非常适合高并发、高IO访问、低CPU计算的应用，一台服务器可以轻松处理10万个并发请求 使用解释性的JavaScript，无需编译，适合快速开发、快速迭代 JavaScript语法对大部分工程师来说，是很容易上手的；同时，JavaScript也是前端开发的最主要的技能 JavaScript是目前最流行最前卫的语言，从Github上面的语言统计可以看出来:
 {% img /images/2013/06/github-top-languages.png %}
 Go Go 是Google在2007年发起的一个开源的服务器编程语言，有如下的优点：
-简单！表现在两方面，一是语法简单、清晰，Java、C&#43;&#43;里面一些复杂的语法都不会出现在这里，你能在Go里面发现简洁的替代方式；另一方面是Go自身所带的库以清晰的结构提供了绝大部分所必需的功能 高性能。Go是编译成本地的二进制运行的，运行效率跟C是一个级别，是PHP之类的动态语言无法比拟的 优秀的并发编程模型，Go里面的Channel和Goroutine在进行并发业务开发的时候，无需担心内存共享中很麻烦的锁的问题；同时Go的并发模型可以有效的利用现代服务器硬件的多核资源 工程编译速度快，同样规模的Go项目，编译时间比C语言项目少很多 Go开发RESTful的服务的速度很快，跟使用PHP的开发效率差不多，并且在代码越来越多的时候，Go的优秀的工程管理优势会越来越明显。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://hoverruan.me/posts/2013/06/09/server-side-engineer-roadmap/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2013-06-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2013-06-09T00:00:00+00:00" />
+简单！表现在两方面，一是语法简单、清晰，Java、C&#43;&#43;里面一些复杂的语法都不会出现在这里，你能在Go里面发现简洁的替代方式；另一方面是Go自身所带的库以清晰的结构提供了绝大部分所必需的功能 高性能。Go是编译成本地的二进制运行的，运行效率跟C是一个级别，是PHP之类的动态语言无法比拟的 优秀的并发编程模型，Go里面的Channel和Goroutine在进行并发业务开发的时候，无需担心内存共享中很麻烦的锁的问题；同时Go的并发模型可以有效的利用现代服务器硬件的多核资源 工程编译速度快，同样规模的Go项目，编译时间比C语言项目少很多 Go开发RESTful的服务的速度很快，跟使用PHP的开发效率差不多，并且在代码越来越多的时候，Go的优秀的工程管理优势会越来越明显。">
+<meta property="og:url" content="https://hoverruan.github.io/posts/2013/06/09/server-side-engineer-roadmap/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="HoverR&#39;s Blog" />
 
-<meta itemprop="name" content="Server Side Engineer Roadmap">
-<meta itemprop="description" content="到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。
-在实践中学习的效率是最高的，所以我们不会专门安排一段较长的时间专门给他们用于学习，通常我们要求他们用一天的时间搭建开发环境，然后第二天或者第三天就开始实际的编码。这听起来似乎有点残酷，或者说，新手能够在第二天就写出有用的代码吗？
-答案是可以的，因为我们采用了结对编程的实践，每个新手在一开始的时候，都由有经验的人带着一起Coding，包括从头创建一个项目，进行配置，创建必要的脚本，一起完成具体的业务需求，一起写测试，一起重构，并发布到服务器。经过这样的过程，新手也能在很短时间内，对整个服务器的开发流程有一个很具体的认知，因为这些都是他亲身经历的（新手通常在Pair的时候应该承担更多的实际的编码工作）。恐惧来源于未知，亲身经历过整个过程以后，开发的每一个方面对这曾经的新手来说，不再是未知的怪兽。
-当然，这个时候大部分人应该还只是知其然不知其所以然，“我知道怎么完成任务，但是我不知道他们运行的机制和原理”，有这种想法的工程师最少不是一个平庸的工程师，因为他有探索本质的欲望，这是很多优秀的工程师（以前喜欢说架构师，但是现在觉得工程师更贴切）的共同的特点，有更高的目标才能进步更快。
-应这些有追求的小伙子/小美女们的要求，在这里尝试整理一些学习的资料和学习路线图，帮助他们更快的成长！
-注：目前我们的技术Stack以Java为主，所以推荐的资料大部分都是Java Web相关的
-基础篇 这里提到的基础知识，我认为是必须掌握的。
-基础篇之Java 抽象类和抽象方法 Java面向对象中的继承、多态 集合工具包 List, Map, Set 的使用 多线程，锁机制 范型 基础篇之前端开发知识 HTML，HTML5 CSS JavaScript基本语法 基础篇之数据库 SQL语法 MySQL基本操作 提高篇 提高篇中提高的框架和知识点，掌握了之后对工作效率的提高有明显的效果。
-提高篇之相关知识点 HTTP协议 RESTful架构 Servlet和JSP规范 JPA规范 提高篇之软件框架 Spring Framework（IoC，MVC） Bootstrap jQuery AngularJS 提高篇之编码技能 《重构》 《代码整洁之道》 TDD 《测试驱动开发》 进阶篇 目前Web开发技术的发展速度越来越快，成熟的Spring &#43; JPA &#43; MySQL的组合的缺点越来越明显，他们对移动互联网的业务开发来说，有点太重了：
-Spring MVC尝试把所有的事情都在服务器端解决，但是现在前端框架的能力已经越来越强大，很多事情放在浏览器里面完成更方便，用户体验更好 打包之后动不动就几十M安装包、更新版本之后重启JVM需要漫长的等待，这些因素都跟现在的移动互联网的敏捷的开发周期不相符 使用到的第三方的依赖包有几十个，具体做什么事情不是特别清楚，发生问题时候，不同意定位 现在的趋势是后端只提供RESTful的接口，展现和控制逻辑完全在前端完成。
-Node.js Node.js利用Google Chrome的V8引擎来运行本地的JavaScript程序，构建快速、高并发的网络应用程序，他的优点是：
-采用事件驱动的模型，非常适合高并发、高IO访问、低CPU计算的应用，一台服务器可以轻松处理10万个并发请求 使用解释性的JavaScript，无需编译，适合快速开发、快速迭代 JavaScript语法对大部分工程师来说，是很容易上手的；同时，JavaScript也是前端开发的最主要的技能 JavaScript是目前最流行最前卫的语言，从Github上面的语言统计可以看出来:
-{% img /images/2013/06/github-top-languages.png %}
-Go Go 是Google在2007年发起的一个开源的服务器编程语言，有如下的优点：
-简单！表现在两方面，一是语法简单、清晰，Java、C&#43;&#43;里面一些复杂的语法都不会出现在这里，你能在Go里面发现简洁的替代方式；另一方面是Go自身所带的库以清晰的结构提供了绝大部分所必需的功能 高性能。Go是编译成本地的二进制运行的，运行效率跟C是一个级别，是PHP之类的动态语言无法比拟的 优秀的并发编程模型，Go里面的Channel和Goroutine在进行并发业务开发的时候，无需担心内存共享中很麻烦的锁的问题；同时Go的并发模型可以有效的利用现代服务器硬件的多核资源 工程编译速度快，同样规模的Go项目，编译时间比C语言项目少很多 Go开发RESTful的服务的速度很快，跟使用PHP的开发效率差不多，并且在代码越来越多的时候，Go的优秀的工程管理优势会越来越明显。"><meta itemprop="datePublished" content="2013-06-09T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2013-06-09T00:00:00+00:00" />
-<meta itemprop="wordCount" content="83">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Server Side Engineer Roadmap"/>
-<meta name="twitter:description" content="到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。
-在实践中学习的效率是最高的，所以我们不会专门安排一段较长的时间专门给他们用于学习，通常我们要求他们用一天的时间搭建开发环境，然后第二天或者第三天就开始实际的编码。这听起来似乎有点残酷，或者说，新手能够在第二天就写出有用的代码吗？
-答案是可以的，因为我们采用了结对编程的实践，每个新手在一开始的时候，都由有经验的人带着一起Coding，包括从头创建一个项目，进行配置，创建必要的脚本，一起完成具体的业务需求，一起写测试，一起重构，并发布到服务器。经过这样的过程，新手也能在很短时间内，对整个服务器的开发流程有一个很具体的认知，因为这些都是他亲身经历的（新手通常在Pair的时候应该承担更多的实际的编码工作）。恐惧来源于未知，亲身经历过整个过程以后，开发的每一个方面对这曾经的新手来说，不再是未知的怪兽。
-当然，这个时候大部分人应该还只是知其然不知其所以然，“我知道怎么完成任务，但是我不知道他们运行的机制和原理”，有这种想法的工程师最少不是一个平庸的工程师，因为他有探索本质的欲望，这是很多优秀的工程师（以前喜欢说架构师，但是现在觉得工程师更贴切）的共同的特点，有更高的目标才能进步更快。
-应这些有追求的小伙子/小美女们的要求，在这里尝试整理一些学习的资料和学习路线图，帮助他们更快的成长！
-注：目前我们的技术Stack以Java为主，所以推荐的资料大部分都是Java Web相关的
-基础篇 这里提到的基础知识，我认为是必须掌握的。
-基础篇之Java 抽象类和抽象方法 Java面向对象中的继承、多态 集合工具包 List, Map, Set 的使用 多线程，锁机制 范型 基础篇之前端开发知识 HTML，HTML5 CSS JavaScript基本语法 基础篇之数据库 SQL语法 MySQL基本操作 提高篇 提高篇中提高的框架和知识点，掌握了之后对工作效率的提高有明显的效果。
-提高篇之相关知识点 HTTP协议 RESTful架构 Servlet和JSP规范 JPA规范 提高篇之软件框架 Spring Framework（IoC，MVC） Bootstrap jQuery AngularJS 提高篇之编码技能 《重构》 《代码整洁之道》 TDD 《测试驱动开发》 进阶篇 目前Web开发技术的发展速度越来越快，成熟的Spring &#43; JPA &#43; MySQL的组合的缺点越来越明显，他们对移动互联网的业务开发来说，有点太重了：
-Spring MVC尝试把所有的事情都在服务器端解决，但是现在前端框架的能力已经越来越强大，很多事情放在浏览器里面完成更方便，用户体验更好 打包之后动不动就几十M安装包、更新版本之后重启JVM需要漫长的等待，这些因素都跟现在的移动互联网的敏捷的开发周期不相符 使用到的第三方的依赖包有几十个，具体做什么事情不是特别清楚，发生问题时候，不同意定位 现在的趋势是后端只提供RESTful的接口，展现和控制逻辑完全在前端完成。
-Node.js Node.js利用Google Chrome的V8引擎来运行本地的JavaScript程序，构建快速、高并发的网络应用程序，他的优点是：
-采用事件驱动的模型，非常适合高并发、高IO访问、低CPU计算的应用，一台服务器可以轻松处理10万个并发请求 使用解释性的JavaScript，无需编译，适合快速开发、快速迭代 JavaScript语法对大部分工程师来说，是很容易上手的；同时，JavaScript也是前端开发的最主要的技能 JavaScript是目前最流行最前卫的语言，从Github上面的语言统计可以看出来:
-{% img /images/2013/06/github-top-languages.png %}
-Go Go 是Google在2007年发起的一个开源的服务器编程语言，有如下的优点：
-简单！表现在两方面，一是语法简单、清晰，Java、C&#43;&#43;里面一些复杂的语法都不会出现在这里，你能在Go里面发现简洁的替代方式；另一方面是Go自身所带的库以清晰的结构提供了绝大部分所必需的功能 高性能。Go是编译成本地的二进制运行的，运行效率跟C是一个级别，是PHP之类的动态语言无法比拟的 优秀的并发编程模型，Go里面的Channel和Goroutine在进行并发业务开发的时候，无需担心内存共享中很麻烦的锁的问题；同时Go的并发模型可以有效的利用现代服务器硬件的多核资源 工程编译速度快，同样规模的Go项目，编译时间比C语言项目少很多 Go开发RESTful的服务的速度很快，跟使用PHP的开发效率差不多，并且在代码越来越多的时候，Go的优秀的工程管理优势会越来越明显。"/>
+  <meta name="twitter:title" content="Server Side Engineer Roadmap" />
+  <meta name="twitter:description" content="到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。
+在实践中学习的效率是最高的，所以我们不会专门安排一段较长的时间专门给他们用于学习，通常我们要求他们用一天的时间搭建开 …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.107.0">
+  <link rel="alternate" href="https://hoverruan.github.io/index.xml" type="application/rss+xml" title="HoverR&#39;s Blog"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://hoverruan.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://hoverruan.github.io/css/syntax.css" /><link rel="stylesheet" href="https://hoverruan.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
-	
   </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://hoverruan.github.io">HoverR&#39;s Blog</a>
+    </div>
 
-  <body class="ma0 avenir bg-near-white">
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+      </ul>
+    </div>
 
     
-   
-  
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        HoverR&#39;s Blog
-      
-    </a>
-    <div class="flex-l items-center">
-      
-
-      
-      
-<div class="ananke-socials">
-  
-</div>
-
-    </div>
   </div>
 </nav>
 
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
     </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>Server Side Engineer Roadmap</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
   </header>
 
 
-
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked">
-          
-        POSTS
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
     
-  </div>
-
-
-      <h1 class="f1 athelas mt3 mb1">Server Side Engineer Roadmap</h1>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2013-06-09T00:00:00Z">June 9, 2013</time>
-      
-
-      
-      
-    </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。</p>
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>到成都研发中心已经有一个多月，现在已经有10位工程师逐渐地参与到服务器的开发工作中来，他们大部分之前都是做客户端的开发工作，有做iOS开发的，有做Android开发的，还有部分之前是做Symbian的开发工作的，大部分都没有服务器开发工作的经验，有一些甚至之前也没有接触过Java。</p>
 <p>在实践中学习的效率是最高的，所以我们不会专门安排一段较长的时间专门给他们用于学习，通常我们要求他们用一天的时间搭建开发环境，然后第二天或者第三天就开始实际的编码。这听起来似乎有点残酷，或者说，新手能够在第二天就写出有用的代码吗？</p>
 <p>答案是可以的，因为我们采用了<a href="http://www.extremeprogramming.org/rules/pair.html">结对编程</a>的实践，每个新手在一开始的时候，都由有经验的人带着一起Coding，包括从头创建一个项目，进行配置，创建必要的脚本，一起完成具体的业务需求，一起写测试，一起重构，并发布到服务器。经过这样的过程，新手也能在很短时间内，对整个服务器的开发流程有一个很具体的认知，因为这些都是他亲身经历的（新手通常在Pair的时候应该承担更多的实际的编码工作）。恐惧来源于未知，亲身经历过整个过程以后，开发的每一个方面对这曾经的新手来说，不再是未知的怪兽。</p>
 <p>当然，这个时候大部分人应该还只是知其然不知其所以然，“我知道怎么完成任务，但是我不知道他们运行的机制和原理”，有这种想法的工程师最少不是一个平庸的工程师，因为他有探索本质的欲望，这是很多优秀的工程师（以前喜欢说架构师，但是现在觉得工程师更贴切）的共同的特点，有更高的目标才能进步更快。</p>
@@ -255,37 +327,84 @@ Go Go 是Google在2007年发起的一个开源的服务器编程语言，有如�
 <li>Hadoop 和 HBase</li>
 <li>Neo4j</li>
 </ul>
-<ul class="pa0">
-  
-</ul>
-<div class="mt6 instapaper_ignoref">
+
+
+        
+
+        
+
+        
+      </article>
+
       
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://hoverruan.github.io/posts/2013/01/10/maven-build-lifecycle/" data-toggle="tooltip" data-placement="top" title="Maven Build Lifecycle">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://hoverruan.github.io/posts/2013/06/21/using-maven-checkstyle-plugin/" data-toggle="tooltip" data-placement="top" title="Using Maven Checkstyle Plugin">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
       
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2022
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://hoverruan.github.io">HoverR&#39;s Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.107.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
       </div>
     </div>
-
-    <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
-
-  </article>
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://hoverruan.me/" >
-    &copy;  HoverR's Blog 2022 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-</div>
-</div>
   </div>
-</footer>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<script src="https://hoverruan.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://hoverruan.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
   </body>
 </html>
+
